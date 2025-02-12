@@ -6,3 +6,12 @@ Includes:
 3. Scoring mechanic.
 4. Camera controls.
 5. Primitive drifting mechanic.
+
+To run the game, build in a Java IDE with the Processing library.
+
+Future improvements:
+1. Display player score while driving.
+2. Display player speed.
+3. Improve car handling.
+4. Add more obstacle variance.
+5. Etc...
