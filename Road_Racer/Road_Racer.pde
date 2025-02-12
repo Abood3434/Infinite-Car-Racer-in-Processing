@@ -108,7 +108,7 @@ void keyPressed() { //key press handler
   } else if (key == '1') {
     // Move camera down
         adjustY += 10;
-  } else if (key == '5'){
+  } else if (key == '5'){ //reset camera to default position
       adjustY = 0;
       adjustX = 0;  
       adjustZ = 0;
@@ -121,11 +121,14 @@ void keyPressed() { //key press handler
           // Cycle through textures when '' is pressed
         currentCarModelIndex = (currentCarModelIndex  -1);
         // Set the new texture for the player object
-    }else{
+    }
+    else
+    {
       currentCarModelIndex = player.carModels.length-1;}
       player.setModel(currentCarModelIndex);
       textureIndex = 0;
-  } if (keyCode == RIGHT && currentScreen == SCREEN_MAIN_MENU) {
+  }
+ if (keyCode == RIGHT && currentScreen == SCREEN_MAIN_MENU){
     // Cycle to the next car model texture
     currentCarModelIndex = (currentCarModelIndex + 1) % player.carModels.length;
     player.setModel(currentCarModelIndex);
@@ -181,7 +184,7 @@ void keyPressed() { //key press handler
   {
     player.brake = true;
   }else if((keyCode == 'X' || keyCode == 'x') && currentScreen == GAME_SCREEN)
-    {
+    {      //Increase max speed upper limit for testing purposes.
       player.maxSpeed += 2;
     }
  
